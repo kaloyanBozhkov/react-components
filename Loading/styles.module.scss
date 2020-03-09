@@ -1,0 +1,40 @@
+@import "scss/abstracts/_mixins";
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.absolutelyPositioned {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:not(.absolutelyPositioned) {
+    width: 100%;
+    height: 100%;
+  }
+
+  svg {
+    @include animate(spin, 1s);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-iteration-count: infinite;
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+}
