@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Table component rendering should render table component not configured properly msg, without any props  1`] = `
+<p>
+  Could not display table, please try again later
+</p>
+`;
+
+exports[`testing Table component rendering should render table component when configured properly  1`] = `
+<div
+  className="table  someName"
+>
+  <header
+    className="tableHeader"
+  >
+    <div
+      key="0"
+    >
+      <p>
+        columnHeader
+      </p>
+    </div>
+  </header>
+  <section
+    className="tableBody"
+    emptymessage="No data to show yet, try again later!"
+  />
+</div>
+`;
