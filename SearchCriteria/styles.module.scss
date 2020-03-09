@@ -1,0 +1,11 @@
+// no particular styling
+
+.searchCriteria {
+  display: flex;
+  flex-direction: column;
+
+  .searchOptions {
+    display: flex;
+    flex-direction: row;
+  }
+}

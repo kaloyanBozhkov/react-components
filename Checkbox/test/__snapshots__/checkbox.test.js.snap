@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing checkbox atom should render the checkbox without a checked class 1`] = `
+<div
+  className="checkboxEl"
+  onClick={[Function]}
+>
+  <div />
+  <input
+    name="someName"
+    type="checkbox"
+  />
+</div>
+`;

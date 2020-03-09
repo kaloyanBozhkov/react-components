@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for SearchCriteria should render SearchCriteria component, with default settings 1`] = `
+<div
+  className="searchCriteria"
+>
+  <ForwardRef
+    inputtype="input"
+    label="Some Label"
+    type="text"
+  />
+  <div
+    className="searchOptions"
+  >
+    <ForwardRef
+      checked={false}
+      inputtype="checkbox"
+      key="match"
+      label="Matches"
+      name="match"
+      onChange={[Function]}
+    />
+    <ForwardRef
+      checked={false}
+      inputtype="checkbox"
+      key="contain"
+      label="Contains"
+      name="contain"
+      onChange={[Function]}
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,47 @@
+@import '../../../../scss/abstracts/variables';
+
+.checkboxEl {
+  > div {
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      background-color: $dark-grey;
+      transition: 150ms;
+      height: 0;
+      width: 0;
+    }
+  }
+  &.checked {
+    > div {
+      &::before {
+        width: 30%;
+        height: 2px;
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+        transform: rotate(35deg) translateY(-50%);
+      }
+      &::after {
+        width: 2px;
+        height: 50%;
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 60%;
+        transform: rotate(35deg) translateX(-50%);
+      }
+    }
+  }
+  > div {
+    background-color: white;
+    border: 1px solid rgba(0, 60, 104, 0.1);
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+
+  > input {
+    display: none;
+  }
+}
