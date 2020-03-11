@@ -80,6 +80,7 @@ const SearchCriteria = forwardRef(({ label = 'Some Label', type = 'text', defaul
             <Input type={type} inputtype="input" label={label} ref={searchRef} />
             <div className={styles.searchOptions}>
                 {checkboxesForType[type].map(({ name, label }) => (
+                    // Input is some HOC which implements an input of type checkbox, which is simply the Checkbox component
                     <Input
                         key={name}
                         inputtype="checkbox"
