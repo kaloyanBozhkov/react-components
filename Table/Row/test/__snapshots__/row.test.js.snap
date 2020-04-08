@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Row component should render Row 1`] = `
+<div
+  className="tableRow withActions somePageModifier"
+>
+  <div
+    key="uniqueRowId-0"
+  >
+    <p>
+      -
+    </p>
+  </div>
+</div>
+`;

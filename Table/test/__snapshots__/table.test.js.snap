@@ -8,22 +8,48 @@ exports[`testing Table component rendering should render table component not con
 
 exports[`testing Table component rendering should render table component when configured properly  1`] = `
 <div
-  className="table  someName"
+  aria-label="table"
+  className="table"
+  role="table"
 >
-  <header
-    className="tableHeader"
-  >
-    <div
-      key="0"
-    >
-      <p>
-        columnHeader
-      </p>
-    </div>
-  </header>
-  <section
-    className="tableBody"
-    emptymessage="No data to show yet, try again later!"
+  <Header
+    headerCells={
+      Array [
+        Object {
+          "label": "columnHeader",
+        },
+      ]
+    }
+    pageName="someName"
   />
+  <section
+    aria-label="table body"
+    className="tableBody"
+  >
+    <Row
+      pageName="someName"
+      rowCells={
+        Array [
+          Object {
+            "cellValue": "hello world",
+            "uniqueRowId": 2,
+          },
+        ]
+      }
+      withActions={true}
+    />
+    <Row
+      pageName="someName"
+      rowCells={
+        Array [
+          Object {
+            "cellValue": "hello world2",
+            "uniqueRowId": 4,
+          },
+        ]
+      }
+      withActions={true}
+    />
+  </section>
 </div>
 `;

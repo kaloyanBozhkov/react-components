@@ -1,4 +1,4 @@
-import React, { forwardRef, useState, useEffect, useRef } from 'react'
+import React, { forwardRef, useState, useEffect, useRef } from './node_modules/react'
 
 import Input from '../../UI/Input/Input'
 import styles from './styles.module.scss'

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Table component conditional renders for header should render header component 1`] = `
+<header
+  aria-label="table header"
+  className="tableHeader somePageModifier"
+>
+  <div
+    key="columnHeader-0"
+  >
+    <p>
+      columnHeader
+    </p>
+  </div>
+</header>
+`;

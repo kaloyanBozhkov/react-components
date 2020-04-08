@@ -1,5 +1,5 @@
-@import "scss/abstracts/_mixins";
-@import "scss/abstracts/_variables";
+@import 'scss/abstracts/_mixins';
+@import 'scss/abstracts/_variables';
 
 .table {
   font-weight: bold;
@@ -9,68 +9,9 @@
   //shadow for uverflow case, to have border left-right showing
   @include boxShadow(false, 0, 0, 7px, -5px, 0.35);
 
-  &:not(.noActions) {
-    .tableRow > div {
-      &[icon="edit"],
-      &[icon="trash-alt"],
-      &[icon="trash"] {
-        cursor: pointer;
-        &:hover {
-          svg {
-            transform: scale(0.85);
-          }
-        }
-      }
-
-      &[icon="edit"] {
-        color: $purple;
-      }
-
-      &[icon="check"] {
-        color: $success-color;
-      }
-    }
-  }
-
-  .tableHeader {
-    grid-gap: 1px;
-    height: 4.2rem;
-    background-color: #eaecef;
-    padding: 1px 1px 0px 1px;
-
-    > div {
-      display: flex;
-      align-items: center;
-
-      font-size: 1rem;
-      text-transform: uppercase;
-
-      transition: 300ms;
-      background-color: #f2f5f7;
-
-      &.withAction {
-        cursor:pointer;
-        &:hover {
-          background-color: #e5e5e9;
-        }
-      }
-
-      padding: $medium-padding * 1.5;
-
-      &.centered {
-        justify-content: center;
-      }
-
-      &.withIcon {
-        p {
-          padding-right: 2rem;
-        }
-      }
-    }
-  }
-
   .tableBody {
     flex-grow: 1;
+    min-width: 60rem;
 
     &:empty {
       &::before {
@@ -82,123 +23,6 @@
         height: 15rem;
         background-color: #eaecef;
         @include boxShadow(false, 0, 2px, 2px, 1px, 0.1);
-      }
-    }
-
-    .tableRow {
-      grid-gap: 1px;
-
-      background-color: #eaecef;
-
-      &:first-of-type {
-        padding: 1px;
-      }
-
-      &:not(:first-of-type) {
-        padding: 0px 1px 1px 1px;
-      }
-
-      &:hover {
-        > div {
-          background-color: #f5f5f5;
-        }
-      }
-
-      > div {
-        display: flex;
-        align-items: center;
-
-        font-size: 1.2rem;
-        transition: 200ms;
-        background-color: white;
-
-        padding: $medium-padding * 1.5;
-
-        &.centeredCellContents {
-          justify-content: center;
-        }
-
-        &.urlDiv {
-          a {
-            color: $secondary-color;
-            text-decoration: none;
-            &:hover {
-              color: darken($secondary-color, 15%);
-            }
-          }
-        }
-
-        &.dateDiv {
-          flex-direction: column;
-          &.cellWrapperContentsLeft {
-            align-items: flex-start;
-          }
-          p {
-            &:first-of-type {
-              font-weight: bold;
-            }
-            &:last-of-type {
-              font-weight: normal;
-            }
-          }
-        }
-
-        &[icon] {
-          //icons and images center here!!
-          justify-content: center;
-        }
-      }
-    }
-  }
-
-  .tableHeader,
-  .tableBody {
-    min-width: 600px;
-
-    > div {
-      &:nth-child(2),
-      &:nth-child(3) {
-        min-width: 5rem;
-      }
-    }
-  }
-
-  .tableHeader,
-  .tableRow {
-    display: grid;
-  }
-
-  //CUSTOM STYLINGS BASED ON CONTENT HERE
-  &.games {
-    .tableHeader,
-    .tableRow {
-      grid-template-columns: repeat(2, 8.5rem) 1fr 0.67fr repeat(3, 8.5rem);
-    }
-    .tableRow {
-      &.games {
-        grid-template-rows: minmax(7.5rem, auto);
-      }
-    }
-  }
-  &.gameFilters {
-    .tableHeader,
-    .tableRow {
-      grid-template-columns: repeat(2, 1fr) repeat(2, 8.5rem);
-    }
-    .tableRow {
-      &.games {
-        grid-template-rows: auto;
-      }
-    }
-  }
-  &.components {
-    .tableHeader,
-    .tableRow {
-      grid-template-columns: repeat(2, 1fr) repeat(3, 8.5rem);
-    }
-    .tableRow {
-      &.games {
-        grid-template-rows: auto;
       }
     }
   }

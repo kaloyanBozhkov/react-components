@@ -1,0 +1,45 @@
+@import 'scss/abstracts/_variables';
+.tableHeader {
+  min-width: 60rem;
+  display: grid;
+  grid-gap: 1px;
+  height: 4.2rem;
+  background-color: #eaecef;
+  padding: 1px 1px 0px 1px;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    transition: 300ms;
+    background-color: #f2f5f7;
+
+    &.withAction {
+      cursor: pointer;
+      &:hover {
+        background-color: #e5e5e9;
+      }
+    }
+
+    padding: $medium-padding * 1.5;
+
+    &.centered {
+      justify-content: center;
+    }
+
+    &.withIcon {
+      p {
+        padding-right: 2rem;
+      }
+    }
+  }
+
+  //CUSTOM STYLINGS BASED ON CONTENT HERE
+
+  &.accountSummary {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
