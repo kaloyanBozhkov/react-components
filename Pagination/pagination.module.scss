@@ -1,47 +1,47 @@
-@import '../../../scss//abstracts/variables';
+@import "scss/abstracts/_variables";
 
-.pagination{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items:center;
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 
-    &:not(.pagination_withoutMarginTop){
-        margin-top: $small-margin / 2;
-       
+  &:not(.pagination_withoutMarginTop) {
+    margin-top: $small-margin / 2;
+  }
+
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.2rem;
+
+  > a,
+  > button {
+    border: none;
+    text-decoration: none;
+    color: $primary-color;
+    outline: none;
+    margin: 0 5px;
+    padding: 4px 0;
+
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($primary-color, 0.5);
     }
 
-    font-weight: bold;
-    font-size:1rem;
-    line-height:1.2rem;
-
-    > a, > button {
-        border:none;
-        text-decoration: none;
-        color:$primary-color;
-        outline:none;
-        margin:0 5px;
-        padding:4px 0;
-        
-        cursor:pointer;
-        &:hover{
-            background-color:rgba($primary-color, 0.5);
-        }
-
-        &.pagination_activeButton{
-            background-color:$primary-color;
-        }
-
-        &:hover, &.pagination_activeButton{
-            color:white;
-            padding:4px;
-            border-radius:4px;
-            margin:0 1px;
-        }
+    &.pagination_activeButton {
+      background-color: $primary-color;
     }
 
-    > span {
-        margin:0 5px;
+    &:hover,
+    &.pagination_activeButton {
+      color: white;
+      padding: 4px;
+      border-radius: 4px;
+      margin: 0 1px;
     }
-    
+  }
+
+  > span {
+    margin: 0 5px;
+  }
 }

@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing pagination component should render button based pagination component 1`] = `
+<div
+  className="pagination"
+>
+  <button
+    className=""
+    disabled={false}
+    key="0"
+    onClick={[Function]}
+  >
+    1
+  </button>
+  <button
+    className=""
+    disabled={false}
+    key="1"
+    onClick={[Function]}
+  >
+    2
+  </button>
+  <button
+    className=""
+    disabled={false}
+    key="2"
+    onClick={[Function]}
+  >
+    3
+  </button>
+  <button
+    className=""
+    disabled={false}
+    key="3"
+    onClick={[Function]}
+  >
+    4
+  </button>
+  <button
+    className=""
+    disabled={false}
+    key="4"
+    onClick={[Function]}
+  >
+    5
+  </button>
+</div>
+`;
+
+exports[`testing pagination component should render pagination component with default navlink buttons 1`] = `
+<div
+  className="pagination"
+>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="0"
+    to="1"
+  >
+    1
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="1"
+    to="2"
+  >
+    2
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="2"
+    to="3"
+  >
+    3
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="3"
+    to="4"
+  >
+    4
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="4"
+    to="5"
+  >
+    5
+  </NavLink>
+</div>
+`;
