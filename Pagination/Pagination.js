@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import styles from './pagination.module.scss'
 
 //used to create arrays with this dope structure [start, start+1, ..., finish]
-const arrFromXToY = (start, finish, arr = []) => [...arr].slice(start, finish)
+const arrFromXToY = (start, finish) => [...new Array(finish)].map((k, index) => start + index)
 
 const createPaginationLogic = (currentPageNumber, endPageNumber, numbersVisibleLeft, numbersVisibleRight) => {
 
