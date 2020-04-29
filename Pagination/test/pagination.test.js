@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Pagination } from '../Pagination'
+import Pagination from '../Pagination'
 
 describe('testing pagination component', () => {
   it('should render pagination component with default navlink buttons', () => {

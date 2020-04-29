@@ -1,4 +1,4 @@
-import { arrFromXToY, createPaginationLogic } from '../Pagination'
+import { arrFromXToY, default as createPaginationLogic } from '../createPaginationLogic'
 
 describe('testing functions used to generate pagination buttons', () => {
   it('should return array with items from expected startn and finish', () => {
@@ -109,5 +109,39 @@ describe('testing functions used to generate pagination buttons', () => {
     )
 
     expect(paginationLogic).toEqual([1, '...', 10])
+  })
+
+  it('should return created pagination array of numbers for total page number of 8 with page number 1 and numbers visible set exceeding the availalbe numbers', () => {
+    const paginationConfig = {
+      currentPageNumber: 1,
+      endPageNumber: 8,
+      numbersVisibleLeft: 4,
+      numbersVisibleRight: 4,
+    }
+    const paginationLogic = createPaginationLogic(
+      paginationConfig.currentPageNumber,
+      paginationConfig.endPageNumber,
+      paginationConfig.numbersVisibleLeft,
+      paginationConfig.numbersVisibleRight
+    )
+
+    expect(paginationLogic).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
+  })
+
+  it('should handle number before last number being dots', () => {
+    const paginationConfig = {
+      currentPageNumber: 5,
+      endPageNumber: 9,
+      numbersVisibleLeft: 3,
+      numbersVisibleRight: 3,
+    }
+    const paginationLogic = createPaginationLogic(
+      paginationConfig.currentPageNumber,
+      paginationConfig.endPageNumber,
+      paginationConfig.numbersVisibleLeft,
+      paginationConfig.numbersVisibleRight
+    )
+
+    expect(paginationLogic).toEqual([1, '...', 3, 4, 5, 6, 7, '...', 9])
   })
 })
