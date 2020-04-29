@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from './Header/Header';
-import Row from './Row/Row';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Header from './Header/Header'
+import Row from './Row/Row'
 
-import styles from './styles.module.scss';
+import styles from './styles.module.scss'
 
 /**
  * @param  {} rows -> aar of obj: {  cellValue, cellType, centered?, onClick? }
@@ -20,22 +20,32 @@ const Table = ({ pageName, headerCells = [], rows = [], withActions = true }) =>
   return (
     <div aria-label="table" role="table" className={styles.table}>
       <Header headerCells={headerCells} pageName={pageName} />
-      <section aria-label="table body"
+      <section
+        aria-label="table body"
         className={styles.tableBody}
         emptymessage={rows.length === 0 ? 'No data to show yet, try again later!' : undefined}
       >
         {/* uniqueRowId is property set to row, an array. row is just stubs data it will be proper after actual api is received */}
-        {rows.length > 0 && rows.map((row) => (<Row key={row.uniqueRowId} uniqueRowId={row.uniqueRowId} rowCells={row} withActions={withActions} pageName={pageName} />))}
+        {rows.length > 0 &&
+          rows.map((row) => (
+            <Row
+              key={row.uniqueRowId}
+              uniqueRowId={row.uniqueRowId}
+              rowCells={row}
+              withActions={withActions}
+              pageName={pageName}
+            />
+          ))}
       </section>
     </div>
-  );
-};
+  )
+}
 
 Table.propTypes = {
   rows: PropTypes.array,
   headerCells: PropTypes.array.isRequired,
   noActions: PropTypes.bool,
   pageName: PropTypes.string.isRequired,
-};
+}
 
-export default Table;
+export default Table
