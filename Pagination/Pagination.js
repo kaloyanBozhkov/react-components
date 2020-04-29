@@ -120,7 +120,7 @@ const DefaultPagination = ({
     numbersVisibleLeft,
     numbersVisibleRight
   );
-  return <Pagination pageRange={pageRange} {...paginationProps} />;
+  return <Pagination pageRange={pageRange} {...paginationProps} currentPageNumber={currentPageNumber} />;
 };
 
 DefaultPagination.propTypes = {
